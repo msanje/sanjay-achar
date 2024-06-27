@@ -69,7 +69,7 @@ export default function Home() {
           <h2 className="text-3xl font-semibold mb-8">Current Focus</h2>
           <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
             <p className="text-gray-300">
-              Currently, I'm deepening my knowledge of React and Next.js, while also exploring backend technologies like Node.js and Express. I'm passionate about creating seamless, user-friendly web applications and always looking for new challenges to expand my skill set.
+              Currently, I&apos;m deepening my knowledge of React and Next.js, while also exploring backend technologies like Node.js and Express. I&apos;m passionate about creating seamless, user-friendly web applications and always looking for new challenges to expand my skill set.
             </p>
           </div>
         </section>
