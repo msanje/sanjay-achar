@@ -19,7 +19,7 @@ export default function Home() {
             { Icon: FaLinkedin, href: 'https://www.linkedin.com/in/m-sanjay-achar' },
             { Icon: FaEnvelope, href: 'mailto:msnjy12o52o@gmail.com' },
             { Icon: BsTwitter, href: 'https://x.com/msanjay12o5' },
-            { Icon: BsDiscord, href: 'https://discord.com/channels/@me' },
+            { Icon: BsDiscord, href: `https://discord.com/users/${process.env.DISCORD_USER_ID}` },
           ].map(({ Icon, href }, index) => (
             <a
               key={index}
