@@ -1,7 +1,7 @@
-import React from 'react';
-import Link from 'next/link';
-import { BsDiscord, BsTwitter } from 'react-icons/bs';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import React from "react";
+import Link from "next/link";
+import { BsDiscord, BsTwitter } from "react-icons/bs";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -15,11 +15,17 @@ export default function Home() {
         </h2>
         <div className="flex justify-center gap-6">
           {[
-            { Icon: FaGithub, href: 'https://github.com/M-Sanjay12o52o' },
-            { Icon: FaLinkedin, href: 'https://www.linkedin.com/in/m-sanjay-achar' },
-            { Icon: FaEnvelope, href: 'mailto:msnjy12o52o@gmail.com' },
-            { Icon: BsTwitter, href: 'https://x.com/msanjay12o5' },
-            { Icon: BsDiscord, href: `https://discord.com/users/${process.env.DISCORD_USER_ID}` },
+            { Icon: FaGithub, href: "https://github.com/M-Sanjay12o52o" },
+            {
+              Icon: FaLinkedin,
+              href: "https://www.linkedin.com/in/m-sanjay-achar",
+            },
+            { Icon: FaEnvelope, href: "mailto:msnjy12o52o@gmail.com" },
+            { Icon: BsTwitter, href: "https://x.com/msanjay12o5" },
+            {
+              Icon: BsDiscord,
+              href: `https://discord.com/users/${process.env.DISCORD_USER_ID}`,
+            },
           ].map(({ Icon, href }, index) => (
             <a
               key={index}
@@ -35,7 +41,9 @@ export default function Home() {
       <main className="container mx-auto px-6 py-16 space-y-24">
         {/* Navigation Links Section */}
         <section className="text-center">
-          <h2 className="text-3xl font-semibold mb-10 text-blue-300">Explore My Work</h2>
+          <h2 className="text-3xl font-semibold mb-10 text-blue-300">
+            Explore My Work
+          </h2>
           <div className="flex flex-col sm:flex-row justify-center gap-8">
             <Link
               href="/projects"
@@ -53,18 +61,23 @@ export default function Home() {
               <h3 className="text-xl font-medium text-purple-200 group-hover:text-purple-300 transition-colors">
                 Blogs
               </h3>
-              <p className="text-gray-400 mt-2">Read my thoughts and insights</p>
+              <p className="text-gray-400 mt-2">
+                Read my thoughts and insights
+              </p>
             </Link>
           </div>
         </section>
 
         <section className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 shadow-xl border border-gray-700">
-          <h2 className="text-3xl font-semibold mb-6 text-blue-300">Current Focus</h2>
+          <h2 className="text-3xl font-semibold mb-6 text-blue-300">
+            Current Focus
+          </h2>
           <p className="text-gray-200 leading-relaxed">
-            Currently, I'm deepening my knowledge of React and Next.js, while also exploring
-            backend technologies like Node.js and Express. I'm passionate about creating
-            seamless, user-friendly web applications and always looking for new challenges to
-            expand my skill set.
+            Currently, I&apos;m deepening my knowledge of React and Next.js,
+            while also exploring backend technologies like Node.js and Express.
+            I&apos;m passionate about creating seamless, user-friendly web
+            applications and always looking for new challenges to expand my
+            skill set.
           </p>
         </section>
       </main>
@@ -75,3 +88,4 @@ export default function Home() {
     </div>
   );
 }
+
