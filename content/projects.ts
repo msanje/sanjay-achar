@@ -49,4 +49,14 @@ export const projects = [
     githubLink: "https://github.com/yourusername/blog-platform",
     date: "2025-04-01",
   },
+  {
+    id: 5,
+    title: "Touch Typing Learning Website",
+    description:
+      "A platform to learn Touch Typing through specific lessons for specific keys.",
+    technologies: ["Next.js", "MySQL", "React"],
+    liveLink: "https://learn-touch-typing.vercel.app/",
+    githubLink: "https://github.com/M-Sanjay12o52o/ctp-touch-typing-learn",
+    date: "2025-05-04",
+  },
 ];

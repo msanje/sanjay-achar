@@ -67,19 +67,19 @@ export default function Home() {
             </Link>
           </div>
         </section>
-
-        <section className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 shadow-xl border border-gray-700">
-          <h2 className="text-3xl font-semibold mb-6 text-blue-300">
-            Current Focus
-          </h2>
-          <p className="text-gray-200 leading-relaxed">
-            Currently, I&apos;m deepening my knowledge of React and Next.js,
-            while also exploring backend technologies like Node.js and Express.
-            I&apos;m passionate about creating seamless, user-friendly web
-            applications and always looking for new challenges to expand my
-            skill set.
-          </p>
-        </section>
+        {/* TODO: Update this */}
+        {/* <section className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 shadow-xl border border-gray-700"> */}
+        {/*   <h2 className="text-3xl font-semibold mb-6 text-blue-300"> */}
+        {/*     Current Focus */}
+        {/*   </h2> */}
+        {/*   <p className="text-gray-200 leading-relaxed"> */}
+        {/*     Currently, I&apos;m deepening my knowledge of React and Next.js, */}
+        {/*     while also exploring backend technologies like Node.js and Express. */}
+        {/*     I&apos;m passionate about creating seamless, user-friendly web */}
+        {/*     applications and always looking for new challenges to expand my */}
+        {/*     skill set. */}
+        {/*   </p> */}
+        {/* </section> */}
       </main>
 
       <footer className="container mx-auto px-6 py-10 text-center text-gray-400 border-t border-gray-800">
