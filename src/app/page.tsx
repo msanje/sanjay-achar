@@ -15,13 +15,13 @@ export default function Home() {
         </h2>
         <div className="flex justify-center gap-6">
           {[
-            { Icon: FaGithub, href: "https://github.com/M-Sanjay12o52o" },
+            { Icon: FaGithub, href: "https://github.com/msanje" },
             {
               Icon: FaLinkedin,
               href: "https://www.linkedin.com/in/m-sanjay-achar",
             },
-            { Icon: FaEnvelope, href: "mailto:msnjy12o52o@gmail.com" },
-            { Icon: BsTwitter, href: "https://x.com/msanjay12o5" },
+            { Icon: FaEnvelope, href: "mailto:m.sanjayachar@gmail.com" },
+            { Icon: BsTwitter, href: "https://x.com/msanjayachar" },
             {
               Icon: BsDiscord,
               href: `https://discord.com/users/${process.env.DISCORD_USER_ID}`,
