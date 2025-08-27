@@ -30,6 +30,8 @@ export default function Home() {
             <a
               key={index}
               href={href}
+              target="_blank"
+              rel="noopeneer noreferrer"
               className="text-gray-300 hover:text-blue-400 transition-colors transform hover:scale-110"
             >
               <Icon className="w-8 h-8" />
