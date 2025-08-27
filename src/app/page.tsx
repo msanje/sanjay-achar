@@ -41,34 +41,35 @@ export default function Home() {
       </header>
 
       <main className="container mx-auto px-6 py-16 space-y-24">
+        {/* TODO: Building fucking cool projects */}
         {/* Navigation Links Section */}
-        <section className="text-center">
-          <h2 className="text-3xl font-semibold mb-10 text-blue-300">
-            Explore My Work
-          </h2>
-          <div className="flex flex-col sm:flex-row justify-center gap-8">
-            <Link
-              href="/projects"
-              className="group bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 w-full sm:w-64 hover:border-blue-500 transition-all duration-300 hover:shadow-xl"
-            >
-              <h3 className="text-xl font-medium text-blue-200 group-hover:text-blue-300 transition-colors">
-                Projects
-              </h3>
-              <p className="text-gray-400 mt-2">Discover my latest creations</p>
-            </Link>
-            <Link
-              href="/blogs"
-              className="group bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 w-full sm:w-64 hover:border-purple-500 transition-all duration-300 hover:shadow-xl"
-            >
-              <h3 className="text-xl font-medium text-purple-200 group-hover:text-purple-300 transition-colors">
-                Blogs
-              </h3>
-              <p className="text-gray-400 mt-2">
-                Read my thoughts and insights
-              </p>
-            </Link>
-          </div>
-        </section>
+        {/* <section className="text-center"> */}
+        {/*   <h2 className="text-3xl font-semibold mb-10 text-blue-300"> */}
+        {/*     Explore My Work */}
+        {/*   </h2> */}
+        {/*   <div className="flex flex-col sm:flex-row justify-center gap-8"> */}
+        {/*     <Link */}
+        {/*       href="/projects" */}
+        {/*       className="group bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 w-full sm:w-64 hover:border-blue-500 transition-all duration-300 hover:shadow-xl" */}
+        {/*     > */}
+        {/*       <h3 className="text-xl font-medium text-blue-200 group-hover:text-blue-300 transition-colors"> */}
+        {/*         Projects */}
+        {/*       </h3> */}
+        {/*       <p className="text-gray-400 mt-2">Discover my latest creations</p> */}
+        {/*     </Link> */}
+        {/*     <Link */}
+        {/*       href="/blogs" */}
+        {/*       className="group bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 w-full sm:w-64 hover:border-purple-500 transition-all duration-300 hover:shadow-xl" */}
+        {/*     > */}
+        {/*       <h3 className="text-xl font-medium text-purple-200 group-hover:text-purple-300 transition-colors"> */}
+        {/*         Blogs */}
+        {/*       </h3> */}
+        {/*       <p className="text-gray-400 mt-2"> */}
+        {/*         Read my thoughts and insights */}
+        {/*       </p> */}
+        {/*     </Link> */}
+        {/*   </div> */}
+        {/* </section> */}
         {/* TODO: Update this */}
         {/* <section className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 shadow-xl border border-gray-700"> */}
         {/*   <h2 className="text-3xl font-semibold mb-6 text-blue-300"> */}
