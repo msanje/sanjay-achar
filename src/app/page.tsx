@@ -1,7 +1,9 @@
 "use client"
 
 import React, { useEffect, useState } from "react";
-import { Github, Linkedin, Twitter, Mail, MessageSquare, Moon, Sun } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, Moon, Sun } from "lucide-react";
+import { FaDiscord as MessageSquare } from 'react-icons/fa'
+
 
 export default function Home() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
