@@ -30,3 +30,54 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Custom keyframes for text effects */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 400% 50%; }
+}
+
+@keyframes typewriter {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+@keyframes fire {
+  0%, 100% { background-position: 0% 100%; }
+  50% { background-position: 0% 0%; }
+}
+
+@keyframes hologram {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+@keyframes electric {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes matrix {
+  0% { filter: hue-rotate(0deg) brightness(1); }
+  50% { filter: hue-rotate(90deg) brightness(1.2); }
+  100% { filter: hue-rotate(0deg) brightness(1); }
+}
+
+@keyframes liquid {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  75% { background-position: 50% 50%; }
+}
