@@ -33,31 +33,62 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white text-black dark:bg-black dark:text-white relative overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center bg-white text-black dark:bg-black dark:text-white relative overflow-hidden">
+      {/* --- Background: extended gray + gradients + subtle patterns --- */}
+      {/* Radial vignette */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_45%_at_50%_-10%,rgba(0,0,0,0.08),transparent_70%)] dark:bg-[radial-gradient(60%_45%_at_50%_-10%,rgba(255,255,255,0.10),transparent_70%)]"
+      />
+      {/* Dotted grid */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-[0.14] dark:opacity-[0.12] [background-size:22px_22px] [background-image:radial-gradient(currentColor_0.8px,transparent_0.8px)] text-black/50 dark:text-white/60"
+      />
+      {/* Angled sweep */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-1/3 left-1/2 -translate-x-1/2 h-[70vh] w-[120vw] rotate-12 bg-gradient-to-r from-black/0 via-black/5 to-black/0 dark:from-white/0 dark:via-white/10 dark:to-white/0"
+      />
+
+      {/* Theme toggle */}
       <button
         type="button"
         aria-label="Toggle theme"
         onClick={() => setTheme((t) => (t === "dark" ? "light" : "dark"))}
-        className="absolute top-4 right-4 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-black/10 dark:border-white/15 hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+        className="absolute top-4 right-4 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-black/10 dark:border-white/15 bg-white/50 dark:bg-white/5 backdrop-blur hover:bg-white/70 dark:hover:bg-white/10 transition-colors"
       >
         {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
       </button>
 
-      <h1 className="text-4xl md:text-6xl font-bold mb-12">Sanjay Achar</h1>
+      {/* Center stack */}
+      <div className="relative z-10 mx-6 w-full max-w-3xl">
+        {/* Soft card backdrop with gray gradient */}
+        <div className="mx-auto max-w-xl rounded-3xl border border-black/10 dark:border-white/10 bg-gradient-to-b from-black/[0.03] via-black/[0.015] to-transparent dark:from-white/[0.05] dark:via-white/[0.03] dark:to-transparent backdrop-blur-sm p-8 sm:p-10">
+          <h1 className="text-center text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight">
+            <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-900 to-neutral-600 dark:from-neutral-50 dark:to-neutral-300">
+              Sanjay Achar
+            </span>
+          </h1>
 
-      <div className="flex gap-8">
-        {socials.map(({ Icon, href, label }) => (
-          <a
-            key={href}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={label}
-            className="group inline-flex h-12 w-12 items-center justify-center rounded-full border border-black/15 dark:border-white/15 text-zinc-700 dark:text-zinc-200 hover:text-black hover:bg-black/5 hover:border-black/40 dark:hover:text-black dark:hover:bg-white dark:hover:border-white transition-colors"
-          >
-            <Icon className="h-6 w-6" />
-          </a>
-        ))}
+          {/* Icon links */}
+          <div className="mt-8 sm:mt-10 flex justify-center gap-5 sm:gap-7">
+            {socials.map(({ Icon, href, label }) => (
+              <a
+                key={href}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="group relative inline-flex h-12 w-12 items-center justify-center rounded-xl border border-black/15 dark:border-white/15 bg-white/60 dark:bg-white/5 backdrop-blur hover:border-black/40 dark:hover:border-white/40 hover:bg-white/80 dark:hover:bg-white/10 transition-colors"
+              >
+                {/* subtle inner gradient ring */}
+                <span className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-b from-black/[0.04] to-transparent dark:from-white/[0.06]" />
+                <Icon className="relative h-6 w-6 text-neutral-700 group-hover:text-black dark:text-neutral-200 dark:group-hover:text-white" />
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
