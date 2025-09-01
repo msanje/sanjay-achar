@@ -42,7 +42,7 @@ export default function Home() {
     },
     { Icon: Twitter, href: "https://x.com/msanjayachar", label: "Twitter / X" },
     { Icon: Mail, href: "mailto:m.sanjayachar@gmail.com", label: "Email" },
-    { Icon: BookOpen, href: "https://blogs.sanjayachar.dev", label: "Blog" },
+    { Icon: BookOpen, href: "https://blog.sanjayachar.dev", label: "Blog" },
     {
       Icon: MessageSquare,
       href: `https://discord.com/users/${process.env.NEXT_PUBLIC_DISCORD_USER_ID ?? ""}`,
