@@ -1,17 +1,28 @@
-"use client"
+"use client";
 
 import React, { useEffect, useState } from "react";
-import { Github, Linkedin, Twitter, Mail, Moon, Sun } from "lucide-react";
-import { FaDiscord as MessageSquare } from 'react-icons/fa'
-
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Mail,
+  Moon,
+  Sun,
+  BookOpen,
+} from "lucide-react";
+import { FaDiscord as MessageSquare } from "react-icons/fa";
 
 export default function Home() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
   useEffect(() => {
-    const stored = typeof window !== "undefined" ? localStorage.getItem("theme") : null;
+    const stored =
+      typeof window !== "undefined" ? localStorage.getItem("theme") : null;
     if (stored === "light" || stored === "dark") {
       setTheme(stored);
-    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+    } else if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: light)").matches
+    ) {
       setTheme("light");
     }
   }, []);
@@ -24,9 +35,14 @@ export default function Home() {
 
   const socials = [
     { Icon: Github, href: "https://github.com/msanje", label: "GitHub" },
-    { Icon: Linkedin, href: "https://www.linkedin.com/in/m-sanjay-achar", label: "LinkedIn" },
+    {
+      Icon: Linkedin,
+      href: "https://www.linkedin.com/in/m-sanjay-achar",
+      label: "LinkedIn",
+    },
     { Icon: Twitter, href: "https://x.com/msanjayachar", label: "Twitter / X" },
     { Icon: Mail, href: "mailto:m.sanjayachar@gmail.com", label: "Email" },
+    { Icon: BookOpen, href: "https://blogs.sanjayachar.dev", label: "Blog" },
     {
       Icon: MessageSquare,
       href: `https://discord.com/users/${process.env.NEXT_PUBLIC_DISCORD_USER_ID ?? ""}`,
@@ -60,7 +76,11 @@ export default function Home() {
         onClick={() => setTheme((t) => (t === "dark" ? "light" : "dark"))}
         className="absolute top-4 right-4 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-black/10 dark:border-white/15 bg-white/50 dark:bg-white/5 backdrop-blur hover:bg-white/70 dark:hover:bg-white/10 transition-colors"
       >
-        {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+        {theme === "dark" ? (
+          <Sun className="h-4 w-4" />
+        ) : (
+          <Moon className="h-4 w-4" />
+        )}
       </button>
 
       {/* Center stack (no card) */}
@@ -88,18 +108,15 @@ export default function Home() {
           {/*   Sanjay Achar */}
           {/* </span> */}
 
-
           {/* // Option 4: Royal Gold */}
           {/* <span className="bg-clip-text text-transparent bg-gradient-to-br from-yellow-900 via-amber-800 to-orange-800 dark:from-yellow-300 dark:via-amber-200 dark:to-orange-300 cursor-default"> */}
           {/*   Sanjay Achar */}
           {/* </span> */}
 
-
           {/* // Option 5: Monochrome Elegance */}
           <span className="bg-clip-text text-transparent bg-gradient-to-br from-gray-900 via-slate-800 to-zinc-800 dark:from-gray-300 dark:via-slate-200 dark:to-zinc-300 cursor-default">
             Sanjay Achar
           </span>
-
 
           {/* 
 // Option 6: Crimson Power
@@ -174,7 +191,6 @@ export default function Home() {
           {/* </span> */}
         </h1>
 
-
         {/* Icon links */}
         <div className="mt-12 md:mt-16 flex justify-center gap-8 md:gap-10">
           {socials.map(({ Icon, href, label }) => (
@@ -195,4 +211,3 @@ export default function Home() {
     </div>
   );
 }
-
