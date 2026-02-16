@@ -34,7 +34,7 @@ export default function Home() {
   }, [theme]);
 
   const socials = [
-    { Icon: Github, href: "https://github.com/msanje", label: "GitHub" },
+    { Icon: Github, href: "https://github.com/msanjayachar", label: "GitHub" },
     {
       Icon: Linkedin,
       href: "https://www.linkedin.com/in/m-sanjay-achar",
